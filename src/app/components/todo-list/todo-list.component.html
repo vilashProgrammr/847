@@ -1,17 +1,19 @@
 <div>
   <div class="ui input" >
-    <form (submit)="addTodo(todo.value)" class="ui form">
+    <form 
+    
+     class="ui form">
     <div class="field">
 
-      <input type="text" placeholder="Enter youyr Todos here" #todo />
+      <input type="text" placeholder="Enter youyr Todos here" name ="todo"#todo [(ngModel)]="todoInput" />
      
-      <button type="submit" class="ui primary button">Add Todo</button>
+      <button type="submit" class="ui primary button" (click)="addTodoInput()" >Add Todo</button>
     </div>
     </form>
   </div>
-  <div *ngIf= "todoList" >
+  <div *ngIf= "todoList"  class="ui list">
     <ul>
-       <li *ngFor = "let todo of todoList ; let i = index" id="{{i}}">{{todo.item}} <button (click)="deleteTodo(todo.item)"><i class="trash icon" ></i></button> </li> 
+       <div class="item" *ngFor = "let todo of todoList ; let i = index" id="{{i}}">{{todo.item}} <button (click)="deleteTodo(todo.item)" class="liButton"><i class="trash icon" ></i></button> </div> 
     </ul>
   </div>
 </div>
