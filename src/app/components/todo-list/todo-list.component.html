@@ -1,0 +1,17 @@
+<div>
+  <div class="ui input" >
+    <form (submit)="addTodo(todo.value)" class="ui form">
+    <div class="field">
+
+      <input type="text" placeholder="Enter youyr Todos here" #todo />
+     
+      <button type="submit" class="ui primary button">Add Todo</button>
+    </div>
+    </form>
+  </div>
+  <div *ngIf= "todoList" >
+    <ul>
+       <li *ngFor = "let todo of todoList ; let i = index" id="{{i}}">{{todo.item}} <button (click)="deleteTodo(todo.item)"><i class="trash icon" ></i></button> </li> 
+    </ul>
+  </div>
+</div>
