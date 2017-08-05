@@ -1,19 +1,20 @@
-<div>
-  <div class="ui input" >
-    <form 
-    
-     class="ui form">
-    <div class="field">
+<div class="container">
+  <div class="form-group" >
+    <h1>Todo App Using Angular 4</h1>
+    <br>
+    <form>
+    <div class="form-control">
 
-      <input type="text" placeholder="Enter youyr Todos here" name ="todo"#todo [(ngModel)]="todoInput" />
+      <input type="text" placeholder="Enter youyr Todos here" name ="todo"#todo [(ngModel)]="todoInput" class="liButton" />
      
-      <button type="submit" class="ui primary button" (click)="addTodoInput()" >Add Todo</button>
+      <button type="submit" class="btn btn-primary liButton" (click)="addTodoInput()" >Add Todo</button>
     </div>
     </form>
   </div>
-  <div *ngIf= "todoList"  class="ui list">
-    <ul>
-       <div class="item" *ngFor = "let todo of todoList ; let i = index" id="{{i}}">{{todo.item}} <button (click)="deleteTodo(todo.item)" class="liButton"><i class="trash icon" ></i></button> </div> 
+  <h2>Todo list</h2>
+  <div *ngIf= "todoList"  class="">
+    <ul class="list-group">
+       <div class="list-group-item lis" *ngFor = "let todo of todoList ; let i = index"  id="{{i}}">{{todo.item}}  <button (click)="deleteTodo(todo.item)" class="liButton btn btn-primary"><i class="fa fa-trash" aria-hidden="true"></i></button> </div> 
     </ul>
   </div>
 </div>

@@ -10,10 +10,7 @@ import {
 })
 export class TodoListComponent implements OnInit {
   todoList: Object[] = [
-  //   {
-  //   item: "Call Mama",
-  //   isComplete: false
-  // }
+
 ];
   todoInput:String='';
   constructor() {}

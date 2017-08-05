@@ -6,9 +6,17 @@ input{
 }
 .liButton{
     margin: 5px;
+    padding: 10px;
 }
 button{
     margin: 5px;
     padding: 3px;
     
+}
+h1 , h2 {
+    color: grey;
+}
+lis{
+    margin: 12px;
+    padding: 12px;
 }
