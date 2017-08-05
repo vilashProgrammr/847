@@ -17,11 +17,16 @@ export class TodoListComponent implements OnInit {
 
   ngOnInit() {}
   addTodoInput(){
+    if(this.todoInput === ''){
+      alert("Enter Todo")
+    }else{
+
     this.todoList.push({
       item: this.todoInput,
       isComplete: false
     });
     this.todoInput = '';
+    }
   }
 
   deleteTodo(item) {
